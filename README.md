@@ -226,14 +226,10 @@ The metadata below was measured from source files offline during catalog constru
 - `Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv`
 - `Friday-WorkingHours-Morning.pcap_ISCX.csv`
 
-This means:
-- Monday normal-only traffic is not present in the measured file set documented here
-- Friday afternoon `PortScan` (`Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv`) and `DDoS LOIC` (`Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`) are also not present in the measured file set documented here
-- access links for those files are listed with the rest of the CIC-IDS-2017 links in [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ids-2017)
-
-In other words:
-- `measured snapshot is partial` means the file set summarized in this catalog does not include every standard day/file from the broader dataset family
-- it does not mean CIC-IDS-2017 itself is only a subset; it means the measured file set documented here is a partial snapshot of the full release
+Scope note:
+- this measured file set includes `5` of the `8` commonly mirrored CIC-IDS-2017 flow CSVs
+- not included here: `Monday-WorkingHours.pcap_ISCX.csv`, `Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv`, and `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`
+- access links for all eight CSVs are listed in [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ids-2017)
 
 Snapshot totals:
 - rows: `1,788,613`
@@ -333,6 +329,10 @@ Source files measured for this catalog:
 - `KDDTrain+_20Percent.txt`
 - `KDDTest+.txt`
 - `KDDTest-21.txt`
+
+Scope note:
+- this measured file set reflects the standard `NSL-KDD` text files
+- it does not include raw `KDD Cup 1999`; it is the cleaned `NSL-KDD` variant normally used in modern legacy comparisons
 
 Combined main split totals (`KDDTrain+` + `KDDTest+`):
 - rows: `148,517`
@@ -439,6 +439,10 @@ Source files measured for this catalog:
 - `Data.csv`
 - `Label.csv`
 - `Readme.txt`
+
+Scope note:
+- this measured file set reflects the `CIC-UNSW-NB15` variant files listed above
+- it is not the same artifact layout as the original `UNSW_NB15_training-set.csv` and `UNSW_NB15_testing-set.csv` release
 
 `Data.csv` snapshot:
 - rows: `447,915`
@@ -556,6 +560,10 @@ Processed ML CSV files measured for this catalog:
 - `Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv`
 - `Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv`
 
+Scope note:
+- this measured file set reflects the public processed-flow CSV layer from AWS
+- it does not cover raw PCAPs or other auxiliary artifacts from the broader dataset release
+
 Processed snapshot totals:
 - rows: `16,233,002`
 - benign rows: `13,484,708`
@@ -664,6 +672,10 @@ Processed snapshot totals:
 Archives measured for this catalog:
 - `CSV-01-12.zip`
 - `CSV-03-11.zip`
+
+Scope note:
+- this measured file set reflects the two CSV archives listed above
+- it does not imply that every other possible release artifact was downloaded, extracted, or measured separately
 
 Archive snapshot totals:
 - rows: `70,427,637`
