@@ -18,10 +18,16 @@ Documented mirror provenance from project docs:
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017`
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/tree/main`
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Friday-WorkingHours-Morning.pcap_ISCX.csv`
+- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv`
+- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Tuesday-WorkingHours.pcap_ISCX.csv`
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Wednesday-workingHours.pcap_ISCX.csv`
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv`
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv`
+
+Friday afternoon attack files commonly used for the missing attack families:
+- `Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv` - `PortScan`
+- `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv` - `DDoS LOIC`
 
 ## NSL-KDD
 

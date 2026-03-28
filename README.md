@@ -213,6 +213,13 @@ This means:
 - Monday normal-only traffic is not present in the local snapshot documented here
 - Friday afternoon `PortScan` and `DDoS LOIC` are also not present in the local snapshot documented here
 
+Related Friday afternoon source files in the broader dataset family:
+- `Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv`
+- `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`
+
+Access links for those files:
+- see `DOWNLOAD_LINKS.md#cic-ids-2017`
+
 In other words:
 - `measured snapshot is partial` means the local CIC-IDS-2017 working copy used for this catalog does not include every standard day/file from the broader dataset family
 - it does not mean CIC-IDS-2017 itself is only a subset; it means the measured local copy documented here is a partial snapshot of the full release
