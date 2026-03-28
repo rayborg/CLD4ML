@@ -163,9 +163,9 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | Field | Value |
 | --- | --- |
 | Best for | chronology-aware attack-family subsets |
-| Official page | `https://www.unb.ca/cic/datasets/ids-2017.html` |
-| Official portal | `https://cicresearch.ca/CICDataset/CIC-IDS-2017/` |
-| Download links | `DOWNLOAD_LINKS.md#cic-ids-2017` |
+| Official page | [UNB](https://www.unb.ca/cic/datasets/ids-2017.html) |
+| Official portal | [portal](https://cicresearch.ca/CICDataset/CIC-IDS-2017/) |
+| Download links | [links](DOWNLOAD_LINKS.md#cic-ids-2017) |
 | Measured rows in local snapshot | `1,788,613` |
 | Benign / attack | `1,517,924 / 270,689` |
 | Ratio | `5.61:1` |
@@ -175,15 +175,15 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 
 ### Source Links
 
-- official dataset page: `https://www.unb.ca/cic/datasets/ids-2017.html`
-- official download portal: `https://cicresearch.ca/CICDataset/CIC-IDS-2017/`
-- feature extractor: `https://github.com/ISCX/CICFlowMeter`
+- official dataset page: <https://www.unb.ca/cic/datasets/ids-2017.html>
+- official download portal: <https://cicresearch.ca/CICDataset/CIC-IDS-2017/>
+- feature extractor: <https://github.com/ISCX/CICFlowMeter>
 - paper: `Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization` (Sharafaldin, Lashkari, Ghorbani, 2018)
-- full access and mirror links: `DOWNLOAD_LINKS.md#cic-ids-2017`
+- full access and mirror links: [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ids-2017)
 
 Note:
 - the official CIC access path is form-gated
-- for researchers who want a more accessible CSV mirror, `DOWNLOAD_LINKS.md#cic-ids-2017` also lists a public Hugging Face mirror
+- for researchers who want a more accessible CSV mirror, [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ids-2017) also lists a public Hugging Face mirror
 
 ### Official Summary
 
@@ -217,7 +217,7 @@ Related Friday afternoon source files in the broader dataset family:
 - `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`
 
 Access links for those files:
-- see `DOWNLOAD_LINKS.md#cic-ids-2017`
+- see [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ids-2017)
 
 In other words:
 - `measured snapshot is partial` means the file set summarized in this catalog does not include every standard day/file from the broader dataset family
@@ -283,9 +283,9 @@ Snapshot totals:
 | Field | Value |
 | --- | --- |
 | Best for | classic reproducible IDS baseline |
-| Official page | `https://www.unb.ca/cic/datasets/nsl.html` |
-| Mirror used here | `https://github.com/defcom17/NSL_KDD` |
-| Download links | `DOWNLOAD_LINKS.md#nsl-kdd` |
+| Official page | [UNB](https://www.unb.ca/cic/datasets/nsl.html) |
+| Mirror used here | [mirror](https://github.com/defcom17/NSL_KDD) |
+| Download links | [links](DOWNLOAD_LINKS.md#nsl-kdd) |
 | Measured rows | `148,517` (`KDDTrain+` + `KDDTest+`) |
 | Normal / attack | `77,054 / 71,463` |
 | Ratio | `1.08:1` |
@@ -295,14 +295,14 @@ Snapshot totals:
 
 ### Source Links
 
-- official UNB page: `https://www.unb.ca/cic/datasets/nsl.html`
-- mirror used for the curated snapshot: `https://github.com/defcom17/NSL_KDD`
-- analysis paper: `https://ieeexplore.ieee.org/document/5356528`
-- full access and mirror links: `DOWNLOAD_LINKS.md#nsl-kdd`
+- official UNB page: <https://www.unb.ca/cic/datasets/nsl.html>
+- mirror used for the curated snapshot: <https://github.com/defcom17/NSL_KDD>
+- analysis paper: <https://ieeexplore.ieee.org/document/5356528>
+- full access and mirror links: [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#nsl-kdd)
 
 Note:
 - the official UNB page is still the main reference page for NSL-KDD
-- the downloadable files were not directly available there through the official page, so a mirror is listed in `DOWNLOAD_LINKS.md#nsl-kdd`
+- the downloadable files were not directly available there through the official page, so a mirror is listed in [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#nsl-kdd)
 
 ### Official Summary
 
@@ -383,9 +383,9 @@ Superclass counts:
 | Field | Value |
 | --- | --- |
 | Best for | modern compact flow benchmark |
-| Official pages | `UNSW` and `UNB CIC` |
-| Official portal | `https://cicresearch.ca/CICDataset/CIC-UNSW/` |
-| Download links | `DOWNLOAD_LINKS.md#cic-unsw-nb15` |
+| Official pages | [UNSW](https://research.unsw.edu.au/projects/unsw-nb15-dataset), [UNB CIC](https://www.unb.ca/cic/datasets/cic-unsw-nb15.html) |
+| Official portal | [portal](https://cicresearch.ca/CICDataset/CIC-UNSW/) |
+| Download links | [links](DOWNLOAD_LINKS.md#cic-unsw-nb15) |
 | Measured rows in `Data.csv` | `447,915` |
 | Benign / attack | `358,332 / 89,583` |
 | Ratio | `4.00:1` |
@@ -395,12 +395,12 @@ Superclass counts:
 
 ### Source Links
 
-- original UNSW-NB15 page: `https://research.unsw.edu.au/projects/unsw-nb15-dataset`
-- CIC-UNSW-NB15 page: `https://www.unb.ca/cic/datasets/cic-unsw-nb15.html`
-- CIC download portal: `https://cicresearch.ca/CICDataset/CIC-UNSW/`
-- original UNSW-NB15 paper: `https://ieeexplore.ieee.org/abstract/document/7348942`
+- original UNSW-NB15 page: <https://research.unsw.edu.au/projects/unsw-nb15-dataset>
+- CIC-UNSW-NB15 page: <https://www.unb.ca/cic/datasets/cic-unsw-nb15.html>
+- CIC download portal: <https://cicresearch.ca/CICDataset/CIC-UNSW/>
+- original UNSW-NB15 paper: <https://ieeexplore.ieee.org/abstract/document/7348942>
 - CIC-UNSW-NB15 augmentation paper: `Poisoning and Evasion: Deep Learning-Based NIDS under Adversarial Attacks` (Mohammadian, Lashkari, Ghorbani, 2024)
-- full access links: `DOWNLOAD_LINKS.md#cic-unsw-nb15`
+- full access links: [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-unsw-nb15)
 
 ### Official Summary
 
@@ -494,9 +494,9 @@ Local snapshot size:
 | Field | Value |
 | --- | --- |
 | Best for | large modern day-based benchmarking |
-| Official page | `https://www.unb.ca/cic/datasets/ids-2018.html` |
-| AWS registry | `https://registry.opendata.aws/cse-cic-ids2018/` |
-| Download links | `DOWNLOAD_LINKS.md#cse-cic-ids2018` |
+| Official page | [UNB](https://www.unb.ca/cic/datasets/ids-2018.html) |
+| AWS registry | [registry](https://registry.opendata.aws/cse-cic-ids2018/) |
+| Download links | [links](DOWNLOAD_LINKS.md#cse-cic-ids2018) |
 | Measured rows | `16,233,002` |
 | Benign / attack | `13,484,708 / 2,748,235` plus `59` malformed rows |
 | Ratio | `4.91:1` excluding malformed rows |
@@ -506,12 +506,12 @@ Local snapshot size:
 
 ### Source Links
 
-- official UNB page: `https://www.unb.ca/cic/datasets/ids-2018.html`
-- AWS registry page: `https://registry.opendata.aws/cse-cic-ids2018/`
+- official UNB page: <https://www.unb.ca/cic/datasets/ids-2018.html>
+- AWS registry page: <https://registry.opendata.aws/cse-cic-ids2018/>
 - public bucket: `s3://cse-cic-ids2018/`
-- public listing endpoint: `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com?list-type=2`
-- paper link on AWS page: `http://www.scitepress.org/Papers/2018/66398/66398.pdf`
-- full access and direct CSV links: `DOWNLOAD_LINKS.md#cse-cic-ids2018`
+- public listing endpoint: <https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com?list-type=2>
+- paper link on AWS page: <http://www.scitepress.org/Papers/2018/66398/66398.pdf>
+- full access and direct CSV links: [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cse-cic-ids2018)
 
 ### Official Summary
 
@@ -610,9 +610,9 @@ Processed snapshot totals:
 | Field | Value |
 | --- | --- |
 | Best for | large-scale DDoS family stress tests |
-| Official page | `https://www.unb.ca/cic/datasets/ddos-2019.html` |
-| Official portal | `https://cicresearch.ca/CICDataset/CICDDoS2019/` |
-| Download links | `DOWNLOAD_LINKS.md#cic-ddos2019` |
+| Official page | [UNB](https://www.unb.ca/cic/datasets/ddos-2019.html) |
+| Official portal | [portal](https://cicresearch.ca/CICDataset/CICDDoS2019/) |
+| Download links | [links](DOWNLOAD_LINKS.md#cic-ddos2019) |
 | Measured rows | `70,427,637` |
 | Benign / attack | `113,828 / 70,313,809` |
 | Composition | strongly attack-dominant |
@@ -622,10 +622,10 @@ Processed snapshot totals:
 
 ### Source Links
 
-- official dataset page: `https://www.unb.ca/cic/datasets/ddos-2019.html`
-- official download portal: `https://cicresearch.ca/CICDataset/CICDDoS2019/`
-- cited paper: `https://ieeexplore.ieee.org/abstract/document/8888419`
-- full access links: `DOWNLOAD_LINKS.md#cic-ddos2019`
+- official dataset page: <https://www.unb.ca/cic/datasets/ddos-2019.html>
+- official download portal: <https://cicresearch.ca/CICDataset/CICDDoS2019/>
+- cited paper: <https://ieeexplore.ieee.org/abstract/document/8888419>
+- full access links: [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ddos2019)
 
 ### Official Summary
 
