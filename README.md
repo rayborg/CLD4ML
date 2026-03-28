@@ -75,9 +75,9 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 - approximate official raw total: `51.1 GB`
 - feature description: more than `80` flow features from `CICFlowMeter`
 
-### Locally Measured Metadata Used To Build This Catalog
+### Dataset Metadata
 
-The metadata below was measured from a local offline working copy of these source files during catalog construction. These files are not hosted in this repo:
+The metadata below was measured from source files offline during catalog construction. These files are not hosted in this repo:
 - `Tuesday-WorkingHours.pcap_ISCX.csv`
 - `Wednesday-workingHours.pcap_ISCX.csv`
 - `Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv`
@@ -159,9 +159,9 @@ Curated snapshot totals:
   - `KDDTest-21.TXT`
 - official UNB note: the dataset is no longer directly hosted there
 
-### Locally Measured Metadata Used To Build This Catalog
+### Dataset Metadata
 
-Source files measured offline for this catalog:
+Source files measured for this catalog:
 - `KDDTrain+.txt`
 - `KDDTrain+_20Percent.txt`
 - `KDDTest+.txt`
@@ -249,9 +249,9 @@ Superclass counts:
   - `UNSW_NB15_training-set.csv` with `175,341` rows
   - `UNSW_NB15_testing-set.csv` with `82,332` rows
 
-### Locally Measured Metadata Used To Build This Catalog
+### Dataset Metadata
 
-Source files measured offline for this catalog:
+Source files measured for this catalog:
 - `CICFlowMeter_out.csv`
 - `Data.csv`
 - `Label.csv`
@@ -343,9 +343,9 @@ Local snapshot size:
   - `30` victim servers
 - feature extraction: more than `80` features from `CICFlowMeter-V3`
 
-### Locally Measured Metadata Used To Build This Catalog
+### Dataset Metadata
 
-Processed ML CSV files measured offline for this catalog:
+Processed ML CSV files measured for this catalog:
 - `Friday-02-03-2018_TrafficForML_CICFlowMeter.csv`
 - `Friday-16-02-2018_TrafficForML_CICFlowMeter.csv`
 - `Friday-23-02-2018_TrafficForML_CICFlowMeter.csv`
@@ -444,9 +444,9 @@ Curated processed snapshot totals:
   - `TFTP`
 - feature extraction: more than `80` traffic features via `CICFlowMeter-V3`
 
-### Locally Measured Metadata Used To Build This Catalog
+### Dataset Metadata
 
-Archives measured offline for this catalog:
+Archives measured for this catalog:
 - `CSV-01-12.zip`
 - `CSV-03-11.zip`
 
