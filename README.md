@@ -66,7 +66,7 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | --- | --- | --- | --- | --- | --- |
 | Best for | classic IDS baseline | modern compact flow set | chrono attack subsets | large modern day-based set | large DDoS stress test |
 | Measured rows | `148,517` | `447,915` | `1,788,613` | `16,233,002` | `70,427,637` |
-| Benign / attack | `1.08:1` | `4.00:1` | `5.61:1` | `4.91:1` | attack-dominant |
+| Benign / attack | `1.08:1` | `4.00:1` | `5.61:1` | `4.91:1` | attack-dominant (`1:617.74`) |
 | Columns | `43` | `76` | `79` | `80-84` | `88` |
 | Measured size | `26.88 MB` | `1.97 GB` | `528.04 MB` | `6.41 GB` | `3.03/28.92 GB` |
 | Access friction | low | medium | medium | low | medium |
