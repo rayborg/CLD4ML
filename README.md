@@ -62,6 +62,10 @@ How to read this page:
 
 Ratios are shown as `benign:attack` unless otherwise noted.
 
+`Access friction` is a quick estimate of how hard it is to get the files:
+- `low` = direct public download is easy
+- `medium` = portal, mirror hunting, or extra steps are usually needed
+
 | Field | `NSL-KDD` | `CIC-UNSW-NB15` | `CIC-IDS-2017` | `CSE-CIC-IDS2018` | `CIC-DDoS2019` |
 | --- | --- | --- | --- | --- | --- |
 | Best for | classic IDS baseline | modern compact flow set | chrono attack subsets | large modern day-based set | large DDoS stress test |
