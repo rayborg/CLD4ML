@@ -67,7 +67,18 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 
 Note:
 - the CIC-IDS-2017 files summarized in this catalog were already present in a local working copy before the CLD4ML build step
-- this README therefore points to the official access page, but does not claim that the local copy was freshly downloaded during the CLD4ML session
+- project provenance for that working copy is documented in `research/docs/dataset_description.md` in the main research workspace
+- that provenance record says the local CIC-IDS-2017 CSV files were pulled from the public Hugging Face mirror below because the official CICResearch download is form-gated
+
+### Provenance Recorded In Project Docs
+
+- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017`
+- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/tree/main`
+- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Friday-WorkingHours-Morning.pcap_ISCX.csv`
+- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Tuesday-WorkingHours.pcap_ISCX.csv`
+- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Wednesday-workingHours.pcap_ISCX.csv`
+- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv`
+- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv`
 
 ### What The Official Source Says
 
