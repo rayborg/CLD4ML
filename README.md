@@ -62,13 +62,15 @@ How to read this page:
 
 Ratios are shown as `benign:attack` unless otherwise noted.
 
-| Dataset | Best For | Measured Rows | Benign / Attack | Columns | Measured Size | Access Friction | Key Caveat |
-| --- | --- | ---: | ---: | ---: | ---: | --- | --- |
-| `NSL-KDD` | classic reproducible IDS benchmark | `148,517` (`train + test`) | `1.08:1` | `43` fields (`41` features + label + difficulty) | `26.88 MB` | low | official UNB page says dataset is no longer hosted there |
-| `CIC-UNSW-NB15` | modern compact flow benchmark | `447,915` (`Data.csv`) | `4.00:1` | `76` feature columns + separate label file | `1.97 GB` | medium | `Data.csv` and `Label.csv` are split; schema differs from `CICFlowMeter_out.csv` |
-| `CIC-IDS-2017` | chronology-aware attack-family subsets | `1,788,613` in local ML snapshot | `5.61:1` | `79` | `528.04 MB` | medium | local snapshot here excludes Monday and Friday-afternoon files |
-| `CSE-CIC-IDS2018` | large modern day-based benchmarking | `16,233,002` | `4.91:1` excluding malformed rows | mostly `80`, one file `84` | `6.41 GB` | low | schema drift and malformed `Label` rows exist in the processed CSVs |
-| `CIC-DDoS2019` | very large DDoS family stress tests | `70,427,637` | attack-dominant (`113,828` benign vs `70,313,809` attack) | `88` | `3.03 GB` compressed / `28.92 GB` uncompressed | medium | per-file label contamination and inconsistent label naming occur |
+| Field | `NSL-KDD` | `CIC-UNSW-NB15` | `CIC-IDS-2017` | `CSE-CIC-IDS2018` | `CIC-DDoS2019` |
+| --- | --- | --- | --- | --- | --- |
+| Best for | classic reproducible IDS benchmark | modern compact flow benchmark | chronology-aware attack-family subsets | large modern day-based benchmarking | very large DDoS family stress tests |
+| Measured rows | `148,517` (`train + test`) | `447,915` (`Data.csv`) | `1,788,613` in local ML snapshot | `16,233,002` | `70,427,637` |
+| Benign / attack | `1.08:1` | `4.00:1` | `5.61:1` | `4.91:1` excluding malformed rows | attack-dominant (`113,828` benign vs `70,313,809` attack) |
+| Columns | `43` fields (`41` features + label + difficulty) | `76` feature columns + separate label file | `79` | mostly `80`, one file `84` | `88` |
+| Measured size | `26.88 MB` | `1.97 GB` | `528.04 MB` | `6.41 GB` | `3.03 GB` compressed / `28.92 GB` uncompressed |
+| Access friction | low | medium | medium | low | medium |
+| Key caveat | official UNB page says dataset is no longer hosted there | `Data.csv` and `Label.csv` are split; schema differs from `CICFlowMeter_out.csv` | local snapshot here excludes Monday and Friday-afternoon files | schema drift and malformed `Label` rows exist in the processed CSVs | per-file label contamination and inconsistent label naming occur |
 
 ## Quick Recommendations
 
