@@ -2,42 +2,49 @@
 
 `CLD4ML` stands for `Curated Labeled Cybersecurity Datasets for Machine Learning`.
 
-This README is designed for public use as a compact but research-grade catalog of five high-value cybersecurity datasets that are widely useful for ML, augmentation, anomaly detection, tabular classification, and benchmark design.
+This README is a practical catalog of five high-value cybersecurity datasets for machine learning.
 
-This repo does include dataset download links for every dataset it catalogs.
+It is built to answer the questions most researchers usually have first:
+- where can I get the dataset?
+- how big is it?
+- what is the class balance?
+- what is it good for?
+- what should I be careful about before I benchmark on it?
 
-Important access note:
-- some links point to official dataset pages or official download portals
-- some links point to mirrors that appear to contain accessible copies of the datasets and may be easier to use than the official sources in practice
-- mirrored accessibility does not by itself imply official ownership or endorsement, so users should still verify provenance, licensing, and citation requirements before use
+This repo includes download links for every dataset it catalogs.
 
-Important scope note:
-- this repo is a catalog, not a redistribution repo
-- this repo does not contain dataset payloads, mirrors, CSVs, PCAPs, ZIPs, or TXT dumps from the source datasets
-- all download rights, licenses, and citation requirements stay with the original dataset owners
-- counts marked as `curated snapshot` were computed from the exact files listed here on `2026-03-28`
-- the file lists below refer to source files measured locally while building this catalog; they are not committed to this public repo
-- when the official source and the locally measured snapshot differ, both are called out explicitly
+Before you use those links:
+- some links are official dataset pages or official download portals
+- some links are mirrors that appear to host accessible copies and may be easier to use than the official source
+- a mirror is not automatically official or endorsed, so always verify provenance, licensing, and citation requirements yourself
 
-Redistribution note:
-- we do not claim blanket authority to mirror or republish these datasets
-- this catalog links to official sources and reports metadata about files measured offline
-- if you want the data, use the official download pages and comply with each dataset's license and citation requirements
+What this repo is:
+- a documentation and metadata catalog
+- a starting point for dataset selection and benchmark planning
 
-## BLUF
+What this repo is not:
+- not a redistribution repo
+- not a host for CSVs, ZIPs, PCAPs, TXT dumps, or other dataset payloads
 
-- If you want the cleanest small classic benchmark, start with `NSL-KDD`.
-- If you want a modern flow-based benchmark with manageable size and a clean binary setup, start with `CIC-UNSW-NB15`.
-- If you want chronology-aware subset design and attack-family-specific benchmarking, `CIC-IDS-2017` is the best starting point.
-- If you want a much larger modern flow benchmark with rich day-level attack scenarios, use `CSE-CIC-IDS2018`.
-- If you want an extreme large-scale DDoS family stress test, use `CIC-DDoS2019`, but expect more label hygiene and task-design work.
-- Not all datasets are equally clean: `CSE-CIC-IDS2018` and `CIC-DDoS2019` need explicit schema and label cleanup before publication-grade experiments.
+How to read this page:
+- use `At A Glance` if you just need a fast comparison
+- use `Quick Recommendations` if you are deciding what to benchmark first
+- use the dataset sections if you need download links, counts, labels, and known issues
+
+## Start Here
+
+- Start with `NSL-KDD` if you want the easiest classic benchmark.
+- Start with `CIC-UNSW-NB15` if you want a modern flow dataset that is still manageable.
+- Start with `CIC-IDS-2017` if you care about attack-family subsets and chronology-aware evaluation.
+- Use `CSE-CIC-IDS2018` when you want a larger modern benchmark and can handle more cleanup.
+- Use `CIC-DDoS2019` for large-scale DDoS family stress tests, not as your easiest first dataset.
+- Expect cleanup work on `CSE-CIC-IDS2018` and `CIC-DDoS2019` before publication-grade experiments.
 
 ## At A Glance
 
 Ratios are shown as `benign:attack` unless otherwise noted.
 
-| Dataset | Best For | Curated Snapshot Rows | Benign / Attack | Columns | Curated Snapshot Size | Access Friction | Key Caveat |
+| Dataset | Best For | Measured Rows | Benign / Attack | Columns | Measured Size | Access Friction | Key Caveat |
 | --- | --- | ---: | ---: | ---: | ---: | --- | --- |
 | `NSL-KDD` | classic reproducible IDS benchmark | `148,517` (`train + test`) | `1.08:1` | `43` fields (`41` features + label + difficulty) | `26.88 MB` | low | official UNB page says dataset is no longer hosted there |
 | `CIC-UNSW-NB15` | modern compact flow benchmark | `447,915` (`Data.csv`) | `4.00:1` | `76` feature columns + separate label file | `1.97 GB` | medium | `Data.csv` and `Label.csv` are split; schema differs from `CICFlowMeter_out.csv` |
@@ -45,7 +52,7 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | `CSE-CIC-IDS2018` | large modern day-based benchmarking | `16,233,002` | `4.91:1` excluding malformed rows | mostly `80`, one file `84` | `6.41 GB` | low | schema drift and malformed `Label` rows exist in the processed CSVs |
 | `CIC-DDoS2019` | very large DDoS family stress tests | `70,427,637` | attack-dominant (`113,828` benign vs `70,313,809` attack) | `88` | `3.03 GB` compressed / `28.92 GB` uncompressed | medium | per-file label contamination and inconsistent label naming occur |
 
-## Quick Recommendations By Use Case
+## Quick Recommendations
 
 - `Need a first public benchmark with minimal download pain:` `NSL-KDD`
 - `Need a better modern binary benchmark than KDD-family data:` `CIC-UNSW-NB15`
@@ -53,7 +60,7 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 - `Need multi-family DDoS stress testing:` `CIC-DDoS2019`
 - `Need the easiest publication narrative across multiple cyber datasets:` `NSL-KDD` + `CIC-UNSW-NB15` + `CIC-IDS-2017`
 
-## Dataset Cards
+## Datasets
 
 ## 1. CIC-IDS-2017
 
@@ -66,7 +73,7 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 - feature extractor: `https://github.com/ISCX/CICFlowMeter`
 - paper: `Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization` (Sharafaldin, Lashkari, Ghorbani, 2018)
 
-### Official Access Page
+### Official Access
 
 - `https://cicresearch.ca/CICDataset/CIC-IDS-2017/`
 
@@ -75,7 +82,7 @@ Note:
 - project provenance for that working copy is documented in `research/docs/dataset_description.md` in the main research workspace
 - that provenance record says the local CIC-IDS-2017 CSV files were pulled from the public Hugging Face mirror below because the official CICResearch download is form-gated
 
-### Provenance Recorded In Project Docs
+### Documented Mirror Provenance
 
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017`
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/tree/main`
@@ -85,7 +92,7 @@ Note:
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv`
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv`
 
-### What The Official Source Says
+### Official Summary
 
 - capture window: `2017-07-03` through `2017-07-07`
 - collection duration: `5` days
@@ -99,7 +106,7 @@ Note:
 - approximate official raw total: `51.1 GB`
 - feature description: more than `80` flow features from `CICFlowMeter`
 
-### Dataset Metadata
+### Measured Snapshot
 
 The metadata below was measured from source files offline during catalog construction. These files are not hosted in this repo:
 - `Tuesday-WorkingHours.pcap_ISCX.csv`
@@ -112,7 +119,7 @@ This means:
 - Monday normal-only traffic is not present in the local snapshot documented here
 - Friday afternoon `PortScan` and `DDoS LOIC` are also not present in the local snapshot documented here
 
-Curated snapshot totals:
+Snapshot totals:
 - rows: `1,788,613`
 - benign rows: `1,517,924`
 - attack rows: `270,689`
@@ -120,7 +127,7 @@ Curated snapshot totals:
 - columns per file: `79`
 - local ML snapshot size: `528.04 MB`
 
-### Curated Snapshot Label Inventory
+### Labels In This Snapshot
 
 | Label | Rows |
 | --- | ---: |
@@ -138,26 +145,26 @@ Curated snapshot totals:
 | `Web Attack - Sql Injection` normalized from mojibake raw label | `21` |
 | `Heartbleed` | `11` |
 
-### Why ML Researchers Use It
+### Why Use It
 
 - supports binary, multiclass, and subset-based benchmark design
 - supports day-aware and chronology-aware evaluation
 - strong fit for augmentation papers because single-attack subsets can be constructed cleanly
 - realistic enough to remain relevant but still small enough for repeated experiments
 
-### Typical Split Conventions
+### Typical Split
 
 - many papers use random row-level splits
 - stronger practice is day-aware or chronology-aware splitting before preprocessing
 - if you are building subsets, use `BENIGN` vs one attack family at a time when possible
 
-### Curation Notes And Hazards
+### Watch-Outs
 
 - web-attack labels can appear with mojibake instead of a normal dash character
 - the official dataset is broader than the local ML snapshot documented here
 - the most reproducible ML workflow is to define the subset first, then split, then fit preprocessing on train only
 
-### Recommended First Tasks
+### Good First Tasks
 
 - `Bot vs BENIGN`
 - `SSH-Patator vs BENIGN`
@@ -173,14 +180,14 @@ Curated snapshot totals:
 - mirror used for the curated snapshot: `https://github.com/defcom17/NSL_KDD`
 - analysis paper: `https://ieeexplore.ieee.org/document/5356528`
 
-### Download Source Used For This Catalog
+### Download Links Used
 
 - `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTrain%2B.txt`
 - `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTest%2B.txt`
 - `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTest-21.txt`
 - `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTrain%2B_20Percent.txt`
 
-### What The Official Source Says
+### Official Summary
 
 - introduced to fix major redundancy problems in `KDD Cup 1999`
 - standard files:
@@ -190,7 +197,7 @@ Curated snapshot totals:
   - `KDDTest-21.TXT`
 - official UNB note: the dataset is no longer directly hosted there
 
-### Dataset Metadata
+### Measured Snapshot
 
 Source files measured for this catalog:
 - `KDDTrain+.txt`
@@ -226,26 +233,26 @@ Superclass counts:
 | `KDDTest+` | `9,711` | `7,458` | `2,421` | `2,887` | `67` |
 | `KDDTest-21` | `2,152` | `4,342` | `2,402` | `2,887` | `67` |
 
-### Why ML Researchers Use It
+### Why Use It
 
 - tiny footprint
 - fixed canonical train/test split
 - still widely recognized in IDS papers
 - convenient for fast baseline checks, ablations, and teaching
 
-### Typical Split Conventions
+### Typical Split
 
 - standard: `KDDTrain+` for train, `KDDTest+` for test
 - harder generalization setting: `KDDTest-21` as test
 - common practical choice: carve validation from `KDDTrain+`
 
-### Curation Notes And Hazards
+### Watch-Outs
 
 - not a modern traffic benchmark
 - no realistic chronology in the way modern flow datasets provide
 - good for comparability, not for strong claims of real-world realism
 
-### Recommended First Tasks
+### Good First Tasks
 
 - `normal vs attack`
 - later, one-vs-normal family tasks for `DoS`, `Probe`, `R2L`, `U2R`
@@ -262,11 +269,11 @@ Superclass counts:
 - original UNSW-NB15 paper: `https://ieeexplore.ieee.org/abstract/document/7348942`
 - CIC-UNSW-NB15 augmentation paper: `Poisoning and Evasion: Deep Learning-Based NIDS under Adversarial Attacks` (Mohammadian, Lashkari, Ghorbani, 2024)
 
-### Download Source Used For This Catalog
+### Download Links Used
 
 - `https://cicresearch.ca/CICDataset/CIC-UNSW/`
 
-### What The Official Source Says
+### Official Summary
 
 - original raw capture size: about `100 GB`
 - original record count: `2,540,044`
@@ -284,7 +291,7 @@ Superclass counts:
   - `UNSW_NB15_training-set.csv` with `175,341` rows
   - `UNSW_NB15_testing-set.csv` with `82,332` rows
 
-### Dataset Metadata
+### Measured Snapshot
 
 Source files measured for this catalog:
 - `CICFlowMeter_out.csv`
@@ -292,7 +299,7 @@ Source files measured for this catalog:
 - `Label.csv`
 - `Readme.txt`
 
-Curated `Data.csv` snapshot:
+`Data.csv` snapshot:
 - rows: `447,915`
 - feature columns: `76`
 - labels stored separately in `Label.csv`
@@ -300,7 +307,7 @@ Curated `Data.csv` snapshot:
 - attack rows: `89,583`
 - benign:attack ratio: `4.00:1`
 
-Curated `CICFlowMeter_out.csv` snapshot:
+`CICFlowMeter_out.csv` snapshot:
 - rows: `3,540,241`
 - columns: `84` including `Label`
 - benign rows: `3,450,658`
@@ -309,7 +316,7 @@ Curated `CICFlowMeter_out.csv` snapshot:
 Local snapshot size:
 - total local size: `1.97 GB`
 
-### Curated Label Inventory (`Data.csv` / `Label.csv`)
+### Labels In This Snapshot (`Data.csv` / `Label.csv`)
 
 | Label | Rows |
 | --- | ---: |
@@ -324,26 +331,26 @@ Local snapshot size:
 | `Analysis` | `385` |
 | `Worms` | `246` |
 
-### Why ML Researchers Use It
+### Why Use It
 
 - much more modern than KDD-family benchmarks
 - easier to handle than CSE-CIC-IDS2018 at full scale
 - clean attack-family inventory for one-vs-benign subset design
 - good fit for binary family-level tasks such as `Exploits vs Benign`
 
-### Typical Split Conventions
+### Typical Split
 
 - original UNSW papers often use the provided train/test files
 - CIC-UNSW users often work directly from `Data.csv` and `Label.csv`
 - if chronology is not trustworthy in the derived file, use one deterministic stratified train/val/test split
 
-### Curation Notes And Hazards
+### Watch-Outs
 
 - `Data.csv` has no inline label column; labels live in `Label.csv`
 - `CICFlowMeter_out.csv` and `Data.csv` do not share the same schema width
 - if you compare against original UNSW-NB15 papers, be explicit about whether you are using original UNSW files or the CIC-UNSW augmented flow extraction
 
-### Recommended First Tasks
+### Good First Tasks
 
 - `Exploits vs Benign`
 - `DoS vs Benign`
@@ -361,7 +368,7 @@ Local snapshot size:
 - public listing endpoint: `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com?list-type=2`
 - paper link on AWS page: `http://www.scitepress.org/Papers/2018/66398/66398.pdf`
 
-### Download Source Used For This Catalog
+### Download Links Used
 
 - `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-02-03-2018_TrafficForML_CICFlowMeter.csv`
 - `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-16-02-2018_TrafficForML_CICFlowMeter.csv`
@@ -374,7 +381,7 @@ Local snapshot size:
 - `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv`
 - `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv`
 
-### What The Official Source Says
+### Official Summary
 
 - collaborative project between `CSE` and `CIC`
 - attack scenarios: `7`
@@ -391,7 +398,7 @@ Local snapshot size:
   - `30` victim servers
 - feature extraction: more than `80` features from `CICFlowMeter-V3`
 
-### Dataset Metadata
+### Measured Snapshot
 
 Processed ML CSV files measured for this catalog:
 - `Friday-02-03-2018_TrafficForML_CICFlowMeter.csv`
@@ -405,7 +412,7 @@ Processed ML CSV files measured for this catalog:
 - `Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv`
 - `Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv`
 
-Curated processed snapshot totals:
+Processed snapshot totals:
 - rows: `16,233,002`
 - benign rows: `13,484,708`
 - attack rows: `2,748,235`
@@ -416,7 +423,7 @@ Curated processed snapshot totals:
   - `Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv`: `84`
 - processed ML CSV snapshot size: `6.41 GB`
 
-### Curated Snapshot Label Inventory
+### Labels In This Snapshot
 
 | Label | Rows |
 | --- | ---: |
@@ -437,26 +444,26 @@ Curated processed snapshot totals:
 | `SQL Injection` | `87` |
 | malformed literal `Label` rows | `59` |
 
-### Why ML Researchers Use It
+### Why Use It
 
 - broad modern attack coverage
 - much larger scale than CIC-IDS-2017
 - useful for day-based generalization, held-out-day testing, and attack-window evaluation
 - strong candidate for cross-dataset validation once a method is stable on smaller benchmarks
 
-### Typical Split Conventions
+### Typical Split
 
 - many papers use day-based or file-based splits
 - weaker practice is global random row shuffling
 - stronger practice is day-aware, attack-window-aware, or held-out-day evaluation
 
-### Curation Notes And Hazards
+### Watch-Outs
 
 - there is schema drift: one file has `84` columns while most have `80`
 - some files contain malformed rows where the label value is literally `Label`
 - `Infilteration` is misspelled in the dataset and should usually be preserved verbatim in raw parsing code, then normalized downstream
 
-### Recommended First Tasks
+### Good First Tasks
 
 - `Bot vs Benign`
 - `Brute Force vs Benign`
@@ -472,11 +479,11 @@ Curated processed snapshot totals:
 - official download portal: `https://cicresearch.ca/CICDataset/CICDDoS2019/`
 - cited paper: `https://ieeexplore.ieee.org/abstract/document/8888419`
 
-### Download Source Used For This Catalog
+### Download Links Used
 
 - `https://cicresearch.ca/CICDataset/CICDDoS2019/`
 
-### What The Official Source Says
+### Official Summary
 
 - focus: reflective and exploitation-based DDoS attack taxonomy
 - organization: first day and second day
@@ -496,13 +503,13 @@ Curated processed snapshot totals:
   - `TFTP`
 - feature extraction: more than `80` traffic features via `CICFlowMeter-V3`
 
-### Dataset Metadata
+### Measured Snapshot
 
 Archives measured for this catalog:
 - `CSV-01-12.zip`
 - `CSV-03-11.zip`
 
-Curated archive totals:
+Archive snapshot totals:
 - rows: `70,427,637`
 - benign rows: `113,828`
 - attack rows: `70,313,809`
@@ -511,7 +518,7 @@ Curated archive totals:
 - compressed local size: `3.03 GB`
 - uncompressed CSV size: `28.92 GB`
 
-### Curated Snapshot Label Inventory
+### Labels In This Snapshot
 
 | Label | Rows |
 | --- | ---: |
@@ -535,26 +542,26 @@ Curated archive totals:
 | `WebDDoS` | `439` |
 | `BENIGN` | `113,828` |
 
-### Why ML Researchers Use It
+### Why Use It
 
 - extreme-scale DDoS family benchmarking
 - very useful for family-level detection and one-family-vs-benign tasks
 - a strong stress test for augmentation methods on high-volume attack data
 
-### Typical Split Conventions
+### Typical Split
 
 - many papers use first-day vs second-day separation
 - others collapse everything into a binary `BENIGN vs DDoS` task
 - stronger practice is to keep family-level tasks separate and preserve day structure where possible
 
-### Curation Notes And Hazards
+### Watch-Outs
 
 - some files named after one family contain rows from other labels
 - label naming is inconsistent, for example `UDP-lag` vs `UDPLag`
 - the dataset is not naturally benign-majority overall in the downloaded CSV bundle; naive `attack vs benign` experiments can therefore be misleading
 - this dataset is best treated as a set of family-specific benchmark sources, not as one monolithic binary table
 
-### Recommended First Tasks
+### Good First Tasks
 
 - `Syn vs Benign`
 - `UDP vs Benign`
