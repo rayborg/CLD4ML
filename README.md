@@ -73,7 +73,7 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | Benign / attack | `1.08:1` | `4.00:1` | `5.61:1` | `4.91:1` | attack-dominant (`1:617.74`) |
 | Columns | `43` | `76` | `79` | `80-84` | `88` |
 | Measured size | `26.88 MB` | `1.97 GB` | `528.04 MB` | `6.41 GB` | `3.03/28.92 GB` |
-| Key caveat | official page exists; mirror used for files | split label files | measured snapshot is partial | schema drift | label contamination |
+| Key caveat | legacy benchmark; weaker real-world realism | split label files | measured snapshot is partial | schema drift | label contamination |
 | Dataset paper | [paper](https://ieeexplore.ieee.org/document/5356528) | [paper](https://ieeexplore.ieee.org/abstract/document/7348942) | [paper](https://www.unb.ca/cic/datasets/ids-2017.html) | [paper](http://www.scitepress.org/Papers/2018/66398/66398.pdf) | [paper](https://ieeexplore.ieee.org/abstract/document/8888419) |
 
 ## Quick Recommendations
