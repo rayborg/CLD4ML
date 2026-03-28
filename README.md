@@ -68,7 +68,8 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 
 | Field | `NSL-KDD` | `CIC-UNSW-NB15` | `CIC-IDS-2017` | `CSE-CIC-IDS2018` | `CIC-DDoS2019` |
 | --- | --- | --- | --- | --- | --- |
-| Year | `2009` | `2015` origin, `2024` CIC variant | `2017` | `2018` | `2019` |
+| Original year | `2009` | `2015` | `2017` | `2018` | `2019` |
+| Variant used here | `standard NSL-KDD files` | `2024 CIC-hosted variant` | `documented local mirror snapshot` | `public AWS processed-flow snapshot` | `official CIC portal CSV archives` |
 | Best for | classic IDS baseline | modern compact flow set | chrono attack subsets | large modern day-based set | large DDoS stress test |
 | Attack classes | `4` superclasses | `9` | `12` in measured snapshot | `14` in measured snapshot | `18` in measured snapshot |
 | Measured rows | `148,517` | `447,915` | `1,788,613` | `16,233,002` | `70,427,637` |
