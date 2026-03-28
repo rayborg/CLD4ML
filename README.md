@@ -29,7 +29,25 @@ What this repo is not:
 How to read this page:
 - use `At A Glance` if you just need a fast comparison
 - use `Quick Recommendations` if you are deciding what to benchmark first
-- use the dataset sections if you need download links, counts, labels, and known issues
+- use the dataset sections if you need counts, labels, and known issues
+- use `DOWNLOAD_LINKS.md` if you want the full set of official and mirror URLs
+
+## Contents
+
+- [Start Here](#start-here)
+- [At A Glance](#at-a-glance)
+- [Quick Recommendations](#quick-recommendations)
+- [Datasets](#datasets)
+- [CIC-IDS-2017](#1-cic-ids-2017)
+- [NSL-KDD](#2-nsl-kdd)
+- [CIC-UNSW-NB15](#3-cic-unsw-nb15)
+- [CSE-CIC-IDS2018](#4-cse-cic-ids2018)
+- [CIC-DDoS2019](#5-cic-ddos2019)
+- [Cross-Dataset Comparison Notes](#cross-dataset-comparison-notes)
+- [Split Guidance](#split-guidance)
+- [Label Hygiene Notes](#label-hygiene-notes)
+- [Access Notes](#access-notes)
+- [What This Repo Does Not Host](#what-this-repo-does-not-host)
 
 ## Start Here
 
@@ -66,31 +84,33 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 
 **Bottom line:** best when you want semantically narrow attack-family subsets, chronology-aware splits, and modern flow-based binary benchmark construction.
 
-### Canonical URLs
+### Quick Facts
+
+| Field | Value |
+| --- | --- |
+| Best for | chronology-aware attack-family subsets |
+| Official page | `https://www.unb.ca/cic/datasets/ids-2017.html` |
+| Official portal | `https://cicresearch.ca/CICDataset/CIC-IDS-2017/` |
+| Download links | `DOWNLOAD_LINKS.md#cic-ids-2017` |
+| Measured rows in local snapshot | `1,788,613` |
+| Benign / attack | `1,517,924 / 270,689` |
+| Ratio | `5.61:1` |
+| Columns | `79` |
+| Measured size | `528.04 MB` |
+| Best first tasks | `Bot`, `SSH-Patator`, `DoS GoldenEye` vs `BENIGN` |
+
+### Source Links
 
 - official dataset page: `https://www.unb.ca/cic/datasets/ids-2017.html`
 - official download portal: `https://cicresearch.ca/CICDataset/CIC-IDS-2017/`
 - feature extractor: `https://github.com/ISCX/CICFlowMeter`
 - paper: `Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization` (Sharafaldin, Lashkari, Ghorbani, 2018)
-
-### Official Access
-
-- `https://cicresearch.ca/CICDataset/CIC-IDS-2017/`
+- full access and mirror links: `DOWNLOAD_LINKS.md#cic-ids-2017`
 
 Note:
 - the CIC-IDS-2017 files summarized in this catalog were already present in a local working copy before the CLD4ML build step
 - project provenance for that working copy is documented in `research/docs/dataset_description.md` in the main research workspace
-- that provenance record says the local CIC-IDS-2017 CSV files were pulled from the public Hugging Face mirror below because the official CICResearch download is form-gated
-
-### Documented Mirror Provenance
-
-- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017`
-- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/tree/main`
-- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Friday-WorkingHours-Morning.pcap_ISCX.csv`
-- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Tuesday-WorkingHours.pcap_ISCX.csv`
-- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Wednesday-workingHours.pcap_ISCX.csv`
-- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv`
-- `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv`
+- that provenance record says the local CIC-IDS-2017 CSV files were pulled from a public Hugging Face mirror because the official CICResearch download is form-gated
 
 ### Official Summary
 
@@ -174,18 +194,27 @@ Snapshot totals:
 
 **Bottom line:** best classic baseline for reproducibility, light storage, and easy comparison to older IDS literature.
 
-### Canonical URLs
+### Quick Facts
+
+| Field | Value |
+| --- | --- |
+| Best for | classic reproducible IDS baseline |
+| Official page | `https://www.unb.ca/cic/datasets/nsl.html` |
+| Mirror used here | `https://github.com/defcom17/NSL_KDD` |
+| Download links | `DOWNLOAD_LINKS.md#nsl-kdd` |
+| Measured rows | `148,517` (`KDDTrain+` + `KDDTest+`) |
+| Normal / attack | `77,054 / 71,463` |
+| Ratio | `1.08:1` |
+| Fields | `43` |
+| Measured size | `26.88 MB` |
+| Best first task | `normal vs attack` |
+
+### Source Links
 
 - official UNB page: `https://www.unb.ca/cic/datasets/nsl.html`
 - mirror used for the curated snapshot: `https://github.com/defcom17/NSL_KDD`
 - analysis paper: `https://ieeexplore.ieee.org/document/5356528`
-
-### Download Links Used
-
-- `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTrain%2B.txt`
-- `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTest%2B.txt`
-- `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTest-21.txt`
-- `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTrain%2B_20Percent.txt`
+- full access and mirror links: `DOWNLOAD_LINKS.md#nsl-kdd`
 
 ### Official Summary
 
@@ -261,17 +290,29 @@ Superclass counts:
 
 **Bottom line:** best modern compact flow benchmark here if you want something more current than NSL-KDD without jumping straight to the scale and hygiene burden of CSE-CIC-IDS2018 or CIC-DDoS2019.
 
-### Canonical URLs
+### Quick Facts
+
+| Field | Value |
+| --- | --- |
+| Best for | modern compact flow benchmark |
+| Official pages | `UNSW` and `UNB CIC` |
+| Official portal | `https://cicresearch.ca/CICDataset/CIC-UNSW/` |
+| Download links | `DOWNLOAD_LINKS.md#cic-unsw-nb15` |
+| Measured rows in `Data.csv` | `447,915` |
+| Benign / attack | `358,332 / 89,583` |
+| Ratio | `4.00:1` |
+| Columns | `76` in `Data.csv`, `84` in `CICFlowMeter_out.csv` |
+| Measured size | `1.97 GB` |
+| Best first tasks | `Exploits`, `DoS`, `Reconnaissance` vs `Benign` |
+
+### Source Links
 
 - original UNSW-NB15 page: `https://research.unsw.edu.au/projects/unsw-nb15-dataset`
 - CIC-UNSW-NB15 page: `https://www.unb.ca/cic/datasets/cic-unsw-nb15.html`
 - CIC download portal: `https://cicresearch.ca/CICDataset/CIC-UNSW/`
 - original UNSW-NB15 paper: `https://ieeexplore.ieee.org/abstract/document/7348942`
 - CIC-UNSW-NB15 augmentation paper: `Poisoning and Evasion: Deep Learning-Based NIDS under Adversarial Attacks` (Mohammadian, Lashkari, Ghorbani, 2024)
-
-### Download Links Used
-
-- `https://cicresearch.ca/CICDataset/CIC-UNSW/`
+- full access links: `DOWNLOAD_LINKS.md#cic-unsw-nb15`
 
 ### Official Summary
 
@@ -360,26 +401,29 @@ Local snapshot size:
 
 **Bottom line:** strongest choice here when you want a large, modern, multi-day cyber benchmark and are willing to do more dataset hygiene work.
 
-### Canonical URLs
+### Quick Facts
+
+| Field | Value |
+| --- | --- |
+| Best for | large modern day-based benchmarking |
+| Official page | `https://www.unb.ca/cic/datasets/ids-2018.html` |
+| AWS registry | `https://registry.opendata.aws/cse-cic-ids2018/` |
+| Download links | `DOWNLOAD_LINKS.md#cse-cic-ids2018` |
+| Measured rows | `16,233,002` |
+| Benign / attack | `13,484,708 / 2,748,235` plus `59` malformed rows |
+| Ratio | `4.91:1` excluding malformed rows |
+| Columns | mostly `80`, one file `84` |
+| Measured size | `6.41 GB` |
+| Best first tasks | `Bot`, `Brute Force`, `DoS/DDoS` vs `Benign` |
+
+### Source Links
 
 - official UNB page: `https://www.unb.ca/cic/datasets/ids-2018.html`
 - AWS registry page: `https://registry.opendata.aws/cse-cic-ids2018/`
 - public bucket: `s3://cse-cic-ids2018/`
 - public listing endpoint: `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com?list-type=2`
 - paper link on AWS page: `http://www.scitepress.org/Papers/2018/66398/66398.pdf`
-
-### Download Links Used
-
-- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-02-03-2018_TrafficForML_CICFlowMeter.csv`
-- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-16-02-2018_TrafficForML_CICFlowMeter.csv`
-- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-23-02-2018_TrafficForML_CICFlowMeter.csv`
-- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv`
-- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv`
-- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv`
-- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv`
-- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv`
-- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv`
-- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv`
+- full access and direct CSV links: `DOWNLOAD_LINKS.md#cse-cic-ids2018`
 
 ### Official Summary
 
@@ -473,15 +517,27 @@ Processed snapshot totals:
 
 **Bottom line:** best when you need a large family-level DDoS benchmark, but it needs the most hygiene before it becomes a clean ML paper benchmark.
 
-### Canonical URLs
+### Quick Facts
+
+| Field | Value |
+| --- | --- |
+| Best for | large-scale DDoS family stress tests |
+| Official page | `https://www.unb.ca/cic/datasets/ddos-2019.html` |
+| Official portal | `https://cicresearch.ca/CICDataset/CICDDoS2019/` |
+| Download links | `DOWNLOAD_LINKS.md#cic-ddos2019` |
+| Measured rows | `70,427,637` |
+| Benign / attack | `113,828 / 70,313,809` |
+| Composition | strongly attack-dominant |
+| Columns | `88` |
+| Measured size | `3.03 GB` compressed / `28.92 GB` uncompressed |
+| Best first tasks | `Syn`, `UDP`, `LDAP or DNS` vs `Benign` |
+
+### Source Links
 
 - official dataset page: `https://www.unb.ca/cic/datasets/ddos-2019.html`
 - official download portal: `https://cicresearch.ca/CICDataset/CICDDoS2019/`
 - cited paper: `https://ieeexplore.ieee.org/abstract/document/8888419`
-
-### Download Links Used
-
-- `https://cicresearch.ca/CICDataset/CICDDoS2019/`
+- full access links: `DOWNLOAD_LINKS.md#cic-ddos2019`
 
 ### Official Summary
 
