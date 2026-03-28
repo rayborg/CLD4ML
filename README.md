@@ -8,9 +8,16 @@ It follows the BLUF principle: the most decision-useful information comes first,
 
 Important scope note:
 - this repo is a catalog, not a redistribution repo
+- this repo does not contain dataset payloads, mirrors, CSVs, PCAPs, ZIPs, or TXT dumps from the source datasets
 - all download rights, licenses, and citation requirements stay with the original dataset owners
 - counts marked as `curated snapshot` were computed from the exact files listed here on `2026-03-28`
-- when the official source and the locally mirrored snapshot differ, both are called out explicitly
+- the file lists below refer to source files measured locally while building this catalog; they are not committed to this public repo
+- when the official source and the locally measured snapshot differ, both are called out explicitly
+
+Redistribution note:
+- we do not claim blanket authority to mirror or republish these datasets
+- this catalog links to official sources and reports metadata about files measured offline
+- if you want the data, use the official download pages and comply with each dataset's license and citation requirements
 
 ## BLUF
 
@@ -68,9 +75,9 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 - approximate official raw total: `51.1 GB`
 - feature description: more than `80` flow features from `CICFlowMeter`
 
-### Curated Snapshot Metadata In This Catalog
+### Locally Measured Metadata Used To Build This Catalog
 
-This catalog currently reflects a locally mirrored machine-learning CSV snapshot with these files:
+The metadata below was measured from a local offline working copy of these source files during catalog construction. These files are not hosted in this repo:
 - `Tuesday-WorkingHours.pcap_ISCX.csv`
 - `Wednesday-workingHours.pcap_ISCX.csv`
 - `Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv`
@@ -152,9 +159,9 @@ Curated snapshot totals:
   - `KDDTest-21.TXT`
 - official UNB note: the dataset is no longer directly hosted there
 
-### Curated Snapshot Metadata In This Catalog
+### Locally Measured Metadata Used To Build This Catalog
 
-Included files:
+Source files measured offline for this catalog:
 - `KDDTrain+.txt`
 - `KDDTrain+_20Percent.txt`
 - `KDDTest+.txt`
@@ -242,9 +249,9 @@ Superclass counts:
   - `UNSW_NB15_training-set.csv` with `175,341` rows
   - `UNSW_NB15_testing-set.csv` with `82,332` rows
 
-### Curated Snapshot Metadata In This Catalog
+### Locally Measured Metadata Used To Build This Catalog
 
-Included files:
+Source files measured offline for this catalog:
 - `CICFlowMeter_out.csv`
 - `Data.csv`
 - `Label.csv`
@@ -336,9 +343,9 @@ Local snapshot size:
   - `30` victim servers
 - feature extraction: more than `80` features from `CICFlowMeter-V3`
 
-### Curated Snapshot Metadata In This Catalog
+### Locally Measured Metadata Used To Build This Catalog
 
-Included processed ML CSV files:
+Processed ML CSV files measured offline for this catalog:
 - `Friday-02-03-2018_TrafficForML_CICFlowMeter.csv`
 - `Friday-16-02-2018_TrafficForML_CICFlowMeter.csv`
 - `Friday-23-02-2018_TrafficForML_CICFlowMeter.csv`
@@ -437,9 +444,9 @@ Curated processed snapshot totals:
   - `TFTP`
 - feature extraction: more than `80` traffic features via `CICFlowMeter-V3`
 
-### Curated Snapshot Metadata In This Catalog
+### Locally Measured Metadata Used To Build This Catalog
 
-Included archives:
+Archives measured offline for this catalog:
 - `CSV-01-12.zip`
 - `CSV-03-11.zip`
 
@@ -554,6 +561,14 @@ Recommended split policy by dataset:
 - `NSL-KDD` official UNB landing page exists, but the dataset is no longer directly downloadable there; a mirror is needed.
 - `CIC-IDS-2017`, `CIC-UNSW-NB15`, and `CIC-DDoS2019` use web-form-gated download portals.
 - `CSE-CIC-IDS2018` is the easiest to automate because the AWS bucket is public.
+
+## What This Repo Does Not Host
+
+- no raw dataset files
+- no processed dataset files
+- no mirrored ZIP archives
+- no PCAPs, CSVs, TXT dumps, or label files from the source datasets
+- only documentation, URLs, and measured metadata summaries
 
 ## Citation And License Reminder
 
