@@ -227,15 +227,9 @@ The metadata below was measured from source files offline during catalog constru
 - `Friday-WorkingHours-Morning.pcap_ISCX.csv`
 
 This means:
-- Monday normal-only traffic is not present in the local snapshot documented here
-- Friday afternoon `PortScan` and `DDoS LOIC` are also not present in the local snapshot documented here
-
-Related Friday afternoon source files in the broader dataset family:
-- `Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv`
-- `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`
-
-Access links for those files:
-- see [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ids-2017)
+- Monday normal-only traffic is not present in the measured file set documented here
+- Friday afternoon `PortScan` (`Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv`) and `DDoS LOIC` (`Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`) are also not present in the measured file set documented here
+- access links for those files are listed with the rest of the CIC-IDS-2017 links in [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ids-2017)
 
 In other words:
 - `measured snapshot is partial` means the file set summarized in this catalog does not include every standard day/file from the broader dataset family
