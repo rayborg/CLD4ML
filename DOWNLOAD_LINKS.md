@@ -14,7 +14,7 @@ Official pages:
 - `https://www.unb.ca/cic/datasets/ids-2017.html`
 - `https://cicresearch.ca/CICDataset/CIC-IDS-2017/`
 
-Documented mirror provenance from project docs:
+Accessible mirror links:
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017`
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/tree/main`
 - `https://huggingface.co/datasets/c01dsnap/CIC-IDS2017/resolve/main/Friday-WorkingHours-Morning.pcap_ISCX.csv`
@@ -34,7 +34,7 @@ Friday afternoon attack files commonly used for the missing attack families:
 Official page:
 - `https://www.unb.ca/cic/datasets/nsl.html`
 
-Mirror used for the measured snapshot:
+Accessible mirror links:
 - `https://github.com/defcom17/NSL_KDD`
 - `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTrain%2B.txt`
 - `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTest%2B.txt`
@@ -55,7 +55,7 @@ Official pages:
 - `https://registry.opendata.aws/cse-cic-ids2018/`
 - `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com?list-type=2`
 
-Direct processed-flow CSV links used for the measured snapshot:
+Direct processed-flow CSV links:
 - `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-02-03-2018_TrafficForML_CICFlowMeter.csv`
 - `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-16-02-2018_TrafficForML_CICFlowMeter.csv`
 - `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-23-02-2018_TrafficForML_CICFlowMeter.csv`

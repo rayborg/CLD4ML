@@ -182,9 +182,8 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 - full access and mirror links: `DOWNLOAD_LINKS.md#cic-ids-2017`
 
 Note:
-- the CIC-IDS-2017 files summarized in this catalog were already present in a local working copy before the CLD4ML build step
-- project provenance for that working copy is documented in `research/docs/dataset_description.md` in the main research workspace
-- that provenance record says the local CIC-IDS-2017 CSV files were pulled from a public Hugging Face mirror because the official CICResearch download is form-gated
+- the official CIC access path is form-gated
+- for researchers who want a more accessible CSV mirror, `DOWNLOAD_LINKS.md#cic-ids-2017` also lists a public Hugging Face mirror
 
 ### Official Summary
 
@@ -221,8 +220,8 @@ Access links for those files:
 - see `DOWNLOAD_LINKS.md#cic-ids-2017`
 
 In other words:
-- `measured snapshot is partial` means the local CIC-IDS-2017 working copy used for this catalog does not include every standard day/file from the broader dataset family
-- it does not mean CIC-IDS-2017 itself is only a subset; it means the measured local copy documented here is a partial snapshot of the full release
+- `measured snapshot is partial` means the file set summarized in this catalog does not include every standard day/file from the broader dataset family
+- it does not mean CIC-IDS-2017 itself is only a subset; it means the measured file set documented here is a partial snapshot of the full release
 
 Snapshot totals:
 - rows: `1,788,613`
@@ -303,7 +302,7 @@ Snapshot totals:
 
 Note:
 - the official UNB page is still the main reference page for NSL-KDD
-- the downloadable files were not directly available there for this catalog build, so a mirror was used for the measured snapshot
+- the downloadable files were not directly available there through the official page, so a mirror is listed in `DOWNLOAD_LINKS.md#nsl-kdd`
 
 ### Official Summary
 
