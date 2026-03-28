@@ -66,14 +66,14 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | --- | --- | --- | --- | --- | --- |
 | Original year | `2009` | `2015` | `2017` | `2018` | `2019` |
 | Variant used here | `standard NSL-KDD files` | `2024 CIC-hosted variant` | `documented local mirror snapshot` | `public AWS processed-flow snapshot` | `official CIC portal CSV archives` |
-| Best for | classic IDS baseline | modern compact flow set | chrono attack subsets | large modern day-based set | large DDoS stress test |
+| Best for | classic IDS<br>baseline | modern compact<br>flow set | chrono attack<br>subsets | large modern<br>day-based set | large DDoS<br>stress test |
 | Attack classes | `4` superclasses | `9` | `12` in measured snapshot | `14` in measured snapshot | `18` in measured snapshot |
-| Attack class names | `DoS, Probe, R2L, U2R` | `Fuzzers, Analysis, Backdoor, DoS, Exploits, Generic, Reconnaissance, Shellcode, Worms` | `Bot, FTP-Patator, SSH-Patator, DoS Hulk, DoS GoldenEye, DoS slowloris, DoS Slowhttptest, Heartbleed, Web Brute Force, Web XSS, Web Sql Injection, Infiltration` | `DDOS attack-HOIC, DDoS attacks-LOIC-HTTP, DoS attacks-Hulk, Bot, FTP-BruteForce, SSH-Bruteforce, Infilteration, DoS attacks-SlowHTTPTest, DoS attacks-GoldenEye, DoS attacks-Slowloris, DDOS attack-LOIC-UDP, Brute Force -Web, Brute Force -XSS, SQL Injection` | `TFTP, Syn, MSSQL, DrDoS_SNMP, DrDoS_DNS, DrDoS_MSSQL, DrDoS_NetBIOS, UDP, NetBIOS, DrDoS_UDP, DrDoS_SSDP, DrDoS_LDAP, LDAP, DrDoS_NTP, UDP-lag, Portmap, UDPLag, WebDDoS` |
+| Attack class names | `DoS`<br>`Probe`<br>`R2L`<br>`U2R` | `Fuzzers`<br>`Analysis`<br>`Backdoor`<br>`DoS`<br>`Exploits`<br>`Generic`<br>`Recon`<br>`Shellcode`<br>`Worms` | `Bot`<br>`FTP-Patator`<br>`SSH-Patator`<br>`DoS Hulk`<br>`GoldenEye`<br>`slowloris`<br>`Slowhttptest`<br>`Heartbleed`<br>`Web BF`<br>`Web XSS`<br>`Web SQLi`<br>`Infiltration` | `HOIC`<br>`LOIC-HTTP`<br>`Hulk`<br>`Bot`<br>`FTP-BF`<br>`SSH-BF`<br>`Infilteration`<br>`SlowHTTPTest`<br>`GoldenEye`<br>`Slowloris`<br>`LOIC-UDP`<br>`Web BF`<br>`Web XSS`<br>`SQLi` | `TFTP`<br>`Syn`<br>`MSSQL`<br>`DrDoS SNMP`<br>`DrDoS DNS`<br>`DrDoS MSSQL`<br>`NetBIOS`<br>`UDP`<br>`DrDoS UDP`<br>`SSDP`<br>`LDAP`<br>`NTP`<br>`UDP-lag`<br>`Portmap`<br>`UDPLag`<br>`WebDDoS` |
 | Measured rows | `148,517` | `447,915` | `1,788,613` | `16,233,002` | `70,427,637` |
 | Benign / attack | `1.08:1` | `4.00:1` | `5.61:1` | `4.91:1` | attack-dominant (`1:617.74`) |
 | Columns | `43` | `76` | `79` | `80-84` | `88` |
 | Measured size | `26.88 MB` | `1.97 GB` | `528.04 MB` | `6.41 GB` | `3.03/28.92 GB` |
-| Key caveat | legacy benchmark; weaker real-world realism | split label files | measured snapshot is partial | schema drift | label contamination |
+| Key caveat | legacy benchmark;<br>weaker realism | split label<br>files | measured snapshot<br>is partial | schema drift | label contamination |
 | Dataset paper | [paper](https://ieeexplore.ieee.org/document/5356528) | [paper](https://ieeexplore.ieee.org/abstract/document/7348942) | [paper](https://www.unb.ca/cic/datasets/ids-2017.html) | [paper](http://www.scitepress.org/Papers/2018/66398/66398.pdf) | [paper](https://ieeexplore.ieee.org/abstract/document/8888419) |
 
 ## Quick Recommendations
