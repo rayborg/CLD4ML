@@ -61,9 +61,13 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 - feature extractor: `https://github.com/ISCX/CICFlowMeter`
 - paper: `Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization` (Sharafaldin, Lashkari, Ghorbani, 2018)
 
-### Download Source Used For This Catalog
+### Official Access Page
 
 - `https://cicresearch.ca/CICDataset/CIC-IDS-2017/`
+
+Note:
+- the CIC-IDS-2017 files summarized in this catalog were already present in a local working copy before the CLD4ML build step
+- this README therefore points to the official access page, but does not claim that the local copy was freshly downloaded during the CLD4ML session
 
 ### What The Official Source Says
 
