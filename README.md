@@ -74,7 +74,7 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | Columns | `43` | `76` | `79` | `80-84` | `88` |
 | Measured size | `26.88 MB` | `1.97 GB` | `528.04 MB` | `6.41 GB` | `3.03/28.92 GB` |
 | Access friction | low | medium | medium | low | medium |
-| Key caveat | official page, mirror used for files | split label files | local subset only | schema drift | label contamination |
+| Key caveat | official page exists; mirror used for files | split label files | measured snapshot is partial | schema drift | label contamination |
 
 ## Quick Recommendations
 
@@ -144,6 +144,10 @@ The metadata below was measured from source files offline during catalog constru
 This means:
 - Monday normal-only traffic is not present in the local snapshot documented here
 - Friday afternoon `PortScan` and `DDoS LOIC` are also not present in the local snapshot documented here
+
+In other words:
+- `measured snapshot is partial` means the local CIC-IDS-2017 working copy used for this catalog does not include every standard day/file from the broader dataset family
+- it does not mean CIC-IDS-2017 itself is only a subset; it means the measured local copy documented here is a partial snapshot of the full release
 
 Snapshot totals:
 - rows: `1,788,613`
@@ -221,6 +225,10 @@ Snapshot totals:
 - mirror used for the curated snapshot: `https://github.com/defcom17/NSL_KDD`
 - analysis paper: `https://ieeexplore.ieee.org/document/5356528`
 - full access and mirror links: `DOWNLOAD_LINKS.md#nsl-kdd`
+
+Note:
+- the official UNB page is still the main reference page for NSL-KDD
+- the downloadable files were not directly available there for this catalog build, so a mirror was used for the measured snapshot
 
 ### Official Summary
 
