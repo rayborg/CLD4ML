@@ -4,8 +4,6 @@
 
 This README is designed for public use as a compact but research-grade catalog of five high-value cybersecurity datasets that are widely useful for ML, augmentation, anomaly detection, tabular classification, and benchmark design.
 
-It follows the BLUF principle: the most decision-useful information comes first, and the fuller metadata comes afterward.
-
 This repo does include dataset download links for every dataset it catalogs.
 
 Important access note:
