@@ -168,11 +168,11 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | Official page | [UNB](https://www.unb.ca/cic/datasets/ids-2017.html) |
 | Official portal | [portal](https://cicresearch.ca/CICDataset/CIC-IDS-2017/) |
 | Download links | [links](DOWNLOAD_LINKS.md#cic-ids-2017) |
-| Measured rows in current snapshot | `2,830,743` |
+| Full 8-CSV corpus rows | `2,830,743` |
 | Benign / attack | `2,273,097 / 557,646` |
 | Ratio | `4.08:1` |
 | Columns | `79` |
-| Measured size | `843.66 MB` |
+| Full 8-CSV corpus size | `843.66 MB` |
 | Best first tasks | `Bot`, `SSH-Patator`, `DoS GoldenEye` vs `BENIGN` |
 
 ### Source Links
@@ -219,9 +219,9 @@ Common CIC-IDS-2017 flow CSV files and their listed mirror sizes:
 Access links for all eight CSVs:
 - see [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ids-2017)
 
-### Measured Snapshot
+### CSV Corpus Snapshot
 
-The metadata below was measured from source files offline during catalog construction. These files are not hosted in this repo:
+The metadata below summarizes the 8 commonly mirrored CIC-IDS-2017 flow CSVs. These files are not hosted in this repo:
 - `Monday-WorkingHours.pcap_ISCX.csv`
 - `Tuesday-WorkingHours.pcap_ISCX.csv`
 - `Wednesday-workingHours.pcap_ISCX.csv`
