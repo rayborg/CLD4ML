@@ -6,6 +6,13 @@ This README is designed for public use as a compact but research-grade catalog o
 
 It follows the BLUF principle: the most decision-useful information comes first, and the fuller metadata comes afterward.
 
+This repo does include dataset download links for every dataset it catalogs.
+
+Important access note:
+- some links point to official dataset pages or official download portals
+- some links point to mirrors that appear to contain accessible copies of the datasets and may be easier to use than the official sources in practice
+- mirrored accessibility does not by itself imply official ownership or endorsement, so users should still verify provenance, licensing, and citation requirements before use
+
 Important scope note:
 - this repo is a catalog, not a redistribution repo
 - this repo does not contain dataset payloads, mirrors, CSVs, PCAPs, ZIPs, or TXT dumps from the source datasets
