@@ -77,6 +77,7 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | Measured size | `26.88 MB` | `1.97 GB` | `528.04 MB` | `6.41 GB` | `3.03/28.92 GB` |
 | Access friction | low | medium | medium | low | medium |
 | Key caveat | official page exists; mirror used for files | split label files | measured snapshot is partial | schema drift | label contamination |
+| Dataset paper | [paper](https://ieeexplore.ieee.org/document/5356528) | [paper](https://ieeexplore.ieee.org/abstract/document/7348942) | [paper](https://www.unb.ca/cic/datasets/ids-2017.html) | [paper](http://www.scitepress.org/Papers/2018/66398/66398.pdf) | [paper](https://ieeexplore.ieee.org/abstract/document/8888419) |
 
 ## Quick Recommendations
 
