@@ -65,16 +65,84 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | Field | `NSL-KDD` | `CIC-UNSW-NB15` | `CIC-IDS-2017` | `CSE-CIC-IDS2018` | `CIC-DDoS2019` |
 | --- | --- | --- | --- | --- | --- |
 | Original year | `2009` | `2015` | `2017` | `2018` | `2019` |
-| Variant used here | `standard NSL-KDD files` | `2024 CIC-hosted variant` | `documented local mirror snapshot` | `public AWS processed-flow snapshot` | `official CIC portal CSV archives` |
-| Best for | classic IDS<br>baseline | modern compact<br>flow set | chrono attack<br>subsets | large modern<br>day-based set | large DDoS<br>stress test |
-| Attack classes | `4` superclasses | `9` | `12` in measured snapshot | `14` in measured snapshot | `18` in measured snapshot |
-| Attack class names | `DoS`<br>`Probe`<br>`R2L`<br>`U2R` | `Fuzzers`<br>`Analysis`<br>`Backdoor`<br>`DoS`<br>`Exploits`<br>`Generic`<br>`Reconnaissance`<br>`Shellcode`<br>`Worms` | `Bot`<br>`FTP-Patator`<br>`SSH-Patator`<br>`DoS Hulk`<br>`DoS GoldenEye`<br>`DoS slowloris`<br>`DoS Slowhttptest`<br>`Heartbleed`<br>`Web Brute Force`<br>`Web XSS`<br>`Web Sql Injection`<br>`Infiltration` | `DDOS attack-HOIC`<br>`DDoS attacks-LOIC-HTTP`<br>`DoS attacks-Hulk`<br>`Bot`<br>`FTP-BruteForce`<br>`SSH-Bruteforce`<br>`Infilteration`<br>`DoS attacks-SlowHTTPTest`<br>`DoS attacks-GoldenEye`<br>`DoS attacks-Slowloris`<br>`DDOS attack-LOIC-UDP`<br>`Brute Force -Web`<br>`Brute Force -XSS`<br>`SQL Injection` | `TFTP`<br>`Syn`<br>`MSSQL`<br>`DrDoS_SNMP`<br>`DrDoS_DNS`<br>`DrDoS_MSSQL`<br>`DrDoS_NetBIOS`<br>`UDP`<br>`NetBIOS`<br>`DrDoS_UDP`<br>`DrDoS_SSDP`<br>`DrDoS_LDAP`<br>`LDAP`<br>`DrDoS_NTP`<br>`UDP-lag`<br>`Portmap`<br>`UDPLag`<br>`WebDDoS` |
+| Variant used here | standard files | 2024 CIC variant | local mirror snapshot | AWS processed flows | CIC portal CSVs |
+| Best for | classic IDS | compact flow | chrono subsets | large day-based | DDoS stress test |
+| Attack classes | `4` | `9` | `12` | `14` | `18` |
 | Measured rows | `148,517` | `447,915` | `1,788,613` | `16,233,002` | `70,427,637` |
 | Benign / attack | `1.08:1` | `4.00:1` | `5.61:1` | `4.91:1` | attack-dominant (`1:617.74`) |
 | Columns | `43` | `76` | `79` | `80-84` | `88` |
 | Measured size | `26.88 MB` | `1.97 GB` | `528.04 MB` | `6.41 GB` | `3.03/28.92 GB` |
-| Key caveat | legacy benchmark;<br>weaker realism | split label<br>files | measured snapshot<br>is partial | schema drift | label contamination |
+| Key caveat | legacy; weaker realism | split label files | partial measured snapshot | schema drift | label contamination |
 | Dataset paper | [paper](https://ieeexplore.ieee.org/document/5356528) | [paper](https://ieeexplore.ieee.org/abstract/document/7348942) | [paper](https://www.unb.ca/cic/datasets/ids-2017.html) | [paper](http://www.scitepress.org/Papers/2018/66398/66398.pdf) | [paper](https://ieeexplore.ieee.org/abstract/document/8888419) |
+
+### Attack Class Names
+
+`NSL-KDD`
+- `DoS`
+- `Probe`
+- `R2L`
+- `U2R`
+
+`CIC-UNSW-NB15`
+- `Fuzzers`
+- `Analysis`
+- `Backdoor`
+- `DoS`
+- `Exploits`
+- `Generic`
+- `Reconnaissance`
+- `Shellcode`
+- `Worms`
+
+`CIC-IDS-2017` measured snapshot
+- `Bot`
+- `FTP-Patator`
+- `SSH-Patator`
+- `DoS Hulk`
+- `DoS GoldenEye`
+- `DoS slowloris`
+- `DoS Slowhttptest`
+- `Heartbleed`
+- `Web Brute Force`
+- `Web XSS`
+- `Web Sql Injection`
+- `Infiltration`
+
+`CSE-CIC-IDS2018` measured snapshot
+- `DDOS attack-HOIC`
+- `DDoS attacks-LOIC-HTTP`
+- `DoS attacks-Hulk`
+- `Bot`
+- `FTP-BruteForce`
+- `SSH-Bruteforce`
+- `Infilteration`
+- `DoS attacks-SlowHTTPTest`
+- `DoS attacks-GoldenEye`
+- `DoS attacks-Slowloris`
+- `DDOS attack-LOIC-UDP`
+- `Brute Force -Web`
+- `Brute Force -XSS`
+- `SQL Injection`
+
+`CIC-DDoS2019` measured snapshot
+- `TFTP`
+- `Syn`
+- `MSSQL`
+- `DrDoS_SNMP`
+- `DrDoS_DNS`
+- `DrDoS_MSSQL`
+- `DrDoS_NetBIOS`
+- `UDP`
+- `NetBIOS`
+- `DrDoS_UDP`
+- `DrDoS_SSDP`
+- `DrDoS_LDAP`
+- `LDAP`
+- `DrDoS_NTP`
+- `UDP-lag`
+- `Portmap`
+- `UDPLag`
+- `WebDDoS`
 
 ## Quick Recommendations
 
