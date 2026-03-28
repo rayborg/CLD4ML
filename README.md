@@ -199,6 +199,24 @@ Note:
 - approximate official raw total: `51.1 GB`
 - feature description: more than `80` flow features from `CICFlowMeter`
 
+### Per-CSV Sizes
+
+Common CIC-IDS-2017 flow CSV files and their listed mirror sizes:
+
+| CSV file | Main coverage | Listed size |
+| --- | --- | ---: |
+| `Monday-WorkingHours.pcap_ISCX.csv` | benign only | `177 MB` |
+| `Tuesday-WorkingHours.pcap_ISCX.csv` | `FTP-Patator`, `SSH-Patator` | `135 MB` |
+| `Wednesday-workingHours.pcap_ISCX.csv` | `DoS`, `Heartbleed` | `225 MB` |
+| `Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv` | web attacks | `52 MB` |
+| `Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv` | `Infilteration` | `83.1 MB` |
+| `Friday-WorkingHours-Morning.pcap_ISCX.csv` | `Bot` | `58.3 MB` |
+| `Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv` | `PortScan` | `76.9 MB` |
+| `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv` | `DDoS LOIC` | `77.1 MB` |
+
+Access links for all eight CSVs:
+- see [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ids-2017)
+
 ### Measured Snapshot
 
 The metadata below was measured from source files offline during catalog construction. These files are not hosted in this repo:
