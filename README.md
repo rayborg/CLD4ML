@@ -61,6 +61,10 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 - feature extractor: `https://github.com/ISCX/CICFlowMeter`
 - paper: `Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization` (Sharafaldin, Lashkari, Ghorbani, 2018)
 
+### Download Source Used For This Catalog
+
+- `https://cicresearch.ca/CICDataset/CIC-IDS-2017/`
+
 ### What The Official Source Says
 
 - capture window: `2017-07-03` through `2017-07-07`
@@ -149,6 +153,13 @@ Curated snapshot totals:
 - mirror used for the curated snapshot: `https://github.com/defcom17/NSL_KDD`
 - analysis paper: `https://ieeexplore.ieee.org/document/5356528`
 
+### Download Source Used For This Catalog
+
+- `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTrain%2B.txt`
+- `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTest%2B.txt`
+- `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTest-21.txt`
+- `https://raw.githubusercontent.com/defcom17/NSL_KDD/master/KDDTrain%2B_20Percent.txt`
+
 ### What The Official Source Says
 
 - introduced to fix major redundancy problems in `KDD Cup 1999`
@@ -230,6 +241,10 @@ Superclass counts:
 - CIC download portal: `https://cicresearch.ca/CICDataset/CIC-UNSW/`
 - original UNSW-NB15 paper: `https://ieeexplore.ieee.org/abstract/document/7348942`
 - CIC-UNSW-NB15 augmentation paper: `Poisoning and Evasion: Deep Learning-Based NIDS under Adversarial Attacks` (Mohammadian, Lashkari, Ghorbani, 2024)
+
+### Download Source Used For This Catalog
+
+- `https://cicresearch.ca/CICDataset/CIC-UNSW/`
 
 ### What The Official Source Says
 
@@ -325,6 +340,19 @@ Local snapshot size:
 - public bucket: `s3://cse-cic-ids2018/`
 - public listing endpoint: `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com?list-type=2`
 - paper link on AWS page: `http://www.scitepress.org/Papers/2018/66398/66398.pdf`
+
+### Download Source Used For This Catalog
+
+- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-02-03-2018_TrafficForML_CICFlowMeter.csv`
+- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-16-02-2018_TrafficForML_CICFlowMeter.csv`
+- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Friday-23-02-2018_TrafficForML_CICFlowMeter.csv`
+- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv`
+- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv`
+- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv`
+- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv`
+- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv`
+- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv`
+- `https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Processed%20Traffic%20Data%20for%20ML%20Algorithms/Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv`
 
 ### What The Official Source Says
 
@@ -423,6 +451,10 @@ Curated processed snapshot totals:
 - official dataset page: `https://www.unb.ca/cic/datasets/ddos-2019.html`
 - official download portal: `https://cicresearch.ca/CICDataset/CICDDoS2019/`
 - cited paper: `https://ieeexplore.ieee.org/abstract/document/8888419`
+
+### Download Source Used For This Catalog
+
+- `https://cicresearch.ca/CICDataset/CICDDoS2019/`
 
 ### What The Official Source Says
 
