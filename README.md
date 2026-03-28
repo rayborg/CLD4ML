@@ -67,12 +67,12 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | Original year | `2009` | `2015` | `2017` | `2018` | `2019` |
 | Variant used here | standard files | 2024 CIC variant | local mirror snapshot | AWS processed flows | CIC portal CSVs |
 | Best for | classic IDS | compact flow | chrono subsets | large day-based | DDoS stress test |
-| Attack classes | `4` | `9` | `12` | `14` | `18` |
-| Measured rows | `148,517` | `447,915` | `1,788,613` | `16,233,002` | `70,427,637` |
-| Benign / attack | `1.08:1` | `4.00:1` | `5.61:1` | `4.91:1` | attack-dominant (`1:617.74`) |
+| Attack classes | `4` | `9` | `14` | `14` | `18` |
+| Measured rows | `148,517` | `447,915` | `2,830,743` | `16,233,002` | `70,427,637` |
+| Benign / attack | `1.08:1` | `4.00:1` | `4.08:1` | `4.91:1` | attack-dominant (`1:617.74`) |
 | Columns | `43` | `76` | `79` | `80-84` | `88` |
-| Measured size | `26.88 MB` | `1.97 GB` | `528.04 MB` | `6.41 GB` | `3.03/28.92 GB` |
-| Key caveat | legacy; weaker realism | split label files | partial measured snapshot | schema drift | label contamination |
+| Measured size | `26.88 MB` | `1.97 GB` | `843.66 MB` | `6.41 GB` | `3.03/28.92 GB` |
+| Key caveat | legacy; weaker realism | split label files | web labels may need normalization | schema drift | label contamination |
 | Dataset paper | [paper](https://ieeexplore.ieee.org/document/5356528) | [paper](https://ieeexplore.ieee.org/abstract/document/7348942) | [paper](https://www.unb.ca/cic/datasets/ids-2017.html) | [paper](http://www.scitepress.org/Papers/2018/66398/66398.pdf) | [paper](https://ieeexplore.ieee.org/abstract/document/8888419) |
 
 ### Attack Class Names
@@ -95,6 +95,8 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 - `Worms` - self-propagating malware traffic
 
 `CIC-IDS-2017` measured snapshot
+- `DDoS` - distributed denial-of-service flooding traffic
+- `PortScan` - scanning traffic used to enumerate ports and services
 - `Bot` - botnet-style command-and-control or infected-host traffic
 - `FTP-Patator` - brute-force credential guessing over FTP
 - `SSH-Patator` - brute-force credential guessing over SSH
@@ -166,11 +168,11 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | Official page | [UNB](https://www.unb.ca/cic/datasets/ids-2017.html) |
 | Official portal | [portal](https://cicresearch.ca/CICDataset/CIC-IDS-2017/) |
 | Download links | [links](DOWNLOAD_LINKS.md#cic-ids-2017) |
-| Measured rows in local snapshot | `1,788,613` |
-| Benign / attack | `1,517,924 / 270,689` |
-| Ratio | `5.61:1` |
+| Measured rows in current snapshot | `2,830,743` |
+| Benign / attack | `2,273,097 / 557,646` |
+| Ratio | `4.08:1` |
 | Columns | `79` |
-| Measured size | `528.04 MB` |
+| Measured size | `843.66 MB` |
 | Best first tasks | `Bot`, `SSH-Patator`, `DoS GoldenEye` vs `BENIGN` |
 
 ### Source Links
@@ -220,31 +222,31 @@ Access links for all eight CSVs:
 ### Measured Snapshot
 
 The metadata below was measured from source files offline during catalog construction. These files are not hosted in this repo:
+- `Monday-WorkingHours.pcap_ISCX.csv`
 - `Tuesday-WorkingHours.pcap_ISCX.csv`
 - `Wednesday-workingHours.pcap_ISCX.csv`
 - `Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv`
 - `Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv`
 - `Friday-WorkingHours-Morning.pcap_ISCX.csv`
-
-Scope note:
-- this measured file set includes `5` of the `8` commonly mirrored CIC-IDS-2017 flow CSVs
-- not included here: `Monday-WorkingHours.pcap_ISCX.csv`, `Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv`, and `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`
-- access links for all eight CSVs are listed in [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md#cic-ids-2017)
+- `Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv`
+- `Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv`
 
 Snapshot totals:
-- rows: `1,788,613`
-- benign rows: `1,517,924`
-- attack rows: `270,689`
-- benign:attack ratio: `5.61:1`
+- rows: `2,830,743`
+- benign rows: `2,273,097`
+- attack rows: `557,646`
+- benign:attack ratio: `4.08:1`
 - columns per file: `79`
-- local ML snapshot size: `528.04 MB`
+- local ML snapshot size: `843.66 MB`
 
 ### Labels In This Snapshot
 
 | Label | Rows |
 | --- | ---: |
-| `BENIGN` | `1,517,924` |
+| `BENIGN` | `2,273,097` |
 | `DoS Hulk` | `231,073` |
+| `PortScan` | `158,930` |
+| `DDoS` | `128,027` |
 | `DoS GoldenEye` | `10,293` |
 | `FTP-Patator` | `7,938` |
 | `DoS slowloris` | `5,796` |
@@ -273,7 +275,7 @@ Snapshot totals:
 ### Watch-Outs
 
 - web-attack labels can appear with mojibake instead of a normal dash character
-- the official dataset is broader than the local ML snapshot documented here
+- the CSV layer is only one part of the broader CIC-IDS-2017 release, which also includes raw PCAP and auxiliary artifacts
 - the most reproducible ML workflow is to define the subset first, then split, then fit preprocessing on train only
 
 ### Good First Tasks
