@@ -74,7 +74,7 @@ Ratios are shown as `benign:attack` unless otherwise noted.
 | Columns | `43` | `76` | `79` | `80-84` | `88` |
 | Measured size | `26.88 MB` | `1.97 GB` | `528.04 MB` | `6.41 GB` | `3.03/28.92 GB` |
 | Access friction | low | medium | medium | low | medium |
-| Key caveat | official UNB page needs mirror | split label files | local subset only | schema drift | label contamination |
+| Key caveat | official page, mirror used for files | split label files | local subset only | schema drift | label contamination |
 
 ## Quick Recommendations
 
